@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	border: 1px solid black;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -58,4 +59,94 @@ html, body {
 }
 
 // start code 
+.padding() {
+	padding-left: 3%;
+}
+
+body {
+	font-size: 62.5% ;
+	width: 60% ;
+	margin: 0 auto;
+	}
+
+nav {
+		font-size: 1.4em ;
+		text-align: right;
+		display: flex;
+		justify-content: flex-end;
+		a {
+			margin: 2% ;
+			color: black;
+			text-decoration: none;
+
+		}
+	}
+
+	header {
+		background: lightblue;
+		.padding() ;
+		img {
+			width: 20% ;
+		}
+
+		div {
+			
+			h1 {
+				font-size: 3.5em;
+			}
+
+			h6 {
+				font-size: 2em;
+				border-bottom: 1px dotted black;
+				margin: 3% 0 3% ;
+				padding-bottom: 3%;
+			}
+
+			p {
+				font-size: 1.5em;
+			}
+
+			button {
+				background: gray ;
+				color: white;
+				border: none;
+				border-radius: 5px ;
+				font-weight: bold;
+				padding: 2% ;
+				margin: 2% 0 7% ;
+			}
+
+		}
+	}
+
+	.topPart {
+			display: flex ;
+			flex-flow: nowrap;
+			justify-content: space-around;
+	}
+
+	.listenUp {
+		width: 48% ;
+		h2 {
+			font-size: 2.5em;
+			padding: 5% 0 3% ;
+		}
+
+		p {
+			font-size: 1.5em;
+			padding: 0 0 5%;
+		}
+	}
+
+	.stuffImGoodAt {
+		width: 48% ;
+		h3 {
+			font-size: 2.2em;
+			padding: 6% 0 3% ;
+		}
+
+		p {
+			padding-left: 9%;
+		}
+	}
 

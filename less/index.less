@@ -23,7 +23,6 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	border: 1px solid black;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -63,10 +62,20 @@ html, body {
 	padding-left: 3%;
 }
 
+.bolding() {
+	font-weight: bold;
+}
+
+@h3 : 2em ;
+
 body {
 	font-size: 62.5% ;
 	width: 60% ;
 	margin: 0 auto;
+	@media (max-width: 500px) {
+		width: 100% ;
+	}
+	
 	}
 
 nav {
@@ -74,6 +83,11 @@ nav {
 		text-align: right;
 		display: flex;
 		justify-content: flex-end;
+
+		@media (max-width: 500px) {
+			justify-content: space-around;
+			background-color: lightblue;
+		}
 		a {
 			margin: 2% ;
 			color: black;
@@ -84,13 +98,19 @@ nav {
 
 	header {
 		background: lightblue;
-		.padding() ;
 		img {
-			width: 20% ;
+			width: 70% ;
+			margin: 3% ;
+
+			@media (max-width: 500px) {
+				width: 100%;
+				margin: 0;
+			}
 		}
 
 		div {
 			
+			.padding() ;
 			h1 {
 				font-size: 3.5em;
 			}
@@ -111,7 +131,7 @@ nav {
 				color: white;
 				border: none;
 				border-radius: 5px ;
-				font-weight: bold;
+				.bolding() ;
 				padding: 2% ;
 				margin: 2% 0 7% ;
 			}
@@ -122,14 +142,23 @@ nav {
 	.topPart {
 			display: flex ;
 			flex-flow: nowrap;
-			justify-content: space-around;
+			justify-content: space-between;
+
+			@media (max-width: 500px) {
+				flex-direction: column;
+			}
 	}
 
 	.listenUp {
 		width: 48% ;
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
 		h2 {
 			font-size: 2.5em;
 			padding: 5% 0 3% ;
+			.bolding() ;
 		}
 
 		p {
@@ -140,13 +169,63 @@ nav {
 
 	.stuffImGoodAt {
 		width: 48% ;
+
+		@media (max-width: 500px) {
+			width: 100% ;
+		}
 		h3 {
-			font-size: 2.2em;
+			font-size: @h3 ;
 			padding: 6% 0 3% ;
+			.bolding() ;
 		}
 
-		p {
-			padding-left: 9%;
+		ol {
+			li {
+				padding: 3%;
+				font-size: 1.5em;
+				border: 1px solid lightgray ;
+			}
 		}
 	}
+
+	.workHistory {
+		h3 {
+			font-size: @h3;
+			margin: 5% 0 2% ;
+			.bolding() ;
+		}
+
+		table {
+			border: 1px solid lightgray;
+			width: 100% ;
+
+			tr {
+				font-size: 1.5em;
+				th {
+					border: 1px solid lightgray;
+					padding: 3% ;
+					text-align: left ;
+				}
+				th:first-child {
+					.bolding() ;
+				}
+			}
+
+			tr:first-child {
+				.bolding() ;
+			}
+
+			tr:nth-child(2), tr:nth-child(4) {
+				background: rgb(208, 231, 238);
+			}
+		}
+	}
+		footer {
+			text-align: center;
+			color: white ;
+			background: gray;
+			margin-top: 5% ;
+			padding: 3% 0 5%;
+			font-size: 1.3em;
+		}
 
